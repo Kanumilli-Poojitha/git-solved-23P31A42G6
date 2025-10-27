@@ -1,0 +1,34 @@
+* a1607dc (HEAD -> main, origin/main) docs: Add changelog
+* 38a9517 docs: Add Git Journey documentation
+* af9d980 docs: Add Checkpoint 1, 2, and 3 screenshots
+* 93236ba docs: Add Checkpoint 1, 2, and 3 screenshots
+* e335491 docs: Add Checkpoint 4 documentation
+| * c13c2ba (feature/another-feature) feat: Add test feature
+|/  
+| *   c73fd87 (refs/stash) On feature/another-feature: temp before revert
+| |\  
+| | * f343ccb index on feature/another-feature: 5d30aef Bad commit
+| |/  
+| * 5d30aef Bad commit
+| * b953cc5 (origin/feature/another-feature) docs: Documented rebase usage
+| * 0d888f8 feat: Add test feature
+|/  
+* 98727d5 (tag: v1.1.0, tag: v1.0.0) docs: Update README
+* 4be8813 feat: Add new feature script
+* d7e2171 docs: Add FAQ section
+| * cc39d4d (feature/new-feature) feat: Add new feature script
+|/  
+* 8a10529 chore: add checkpoint3 screenshot after merging conflict-simulator
+*   be8be5f merge: Resolve all conflicts between main and conflict-simulator
+|\  
+| * d3dd9b2 (instructor/conflict-simulator, conflict-simulator) updating conflict-simulator
+* | 5a1bd25 Add checkpoint2 screenshot
+* | 3b0cdbc Add server.js and other new files
+* |   e85b8eb merge: Resolve all conflicts between main and dev branches
+|\ \  
+| * | 02011a5 (instructor/dev, dev) updating dev
+| |/  
+* | 0312c6f (instructor/main, instructor/HEAD) updating main
+* | fadfd24 Revise README for DevOps Simulator project
+|/  
+* ae630eb Initial commit
