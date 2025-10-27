@@ -1,40 +1,20 @@
 # System Architecture
 
 ## Overview
-DevOps Simulator follows a microservices architecture designed for high availability and scalability. This document covers both production and development configurations.
+DevOps Simulator follows a microservices architecture for production and a simplified stack for development.
 
 ## Components
+- *App Server*: Node.js + Express (prod port 8080, dev 3000)
+- *Database*: PostgreSQL (prod HA, dev single instance)
+- *Monitoring*: Prometheus+Grafana in prod; console logs in dev
 
-### 1. Application Server
-- **Technology**: Node.js + Express
-- **Production Port**: 8080
-- **Development Port**: 3000
-- **Scaling**: Horizontal auto-scaling (production only)
-- **Development Features**: Hot reload, debug mode
-
-### 2. Database Layer
-- **Database**: PostgreSQL 14
-- **Production**: Master-slave replication with automated backups
-- **Development**: Single local instance with seed data
-
-### 3. Monitoring System
-- **Production**: Prometheus + Grafana with email alerts
-- **Development**: Console logging with verbose output
-- **Metrics**: CPU, Memory, Disk, Network
-
-## Deployment Strategy
-
-### Production
-- **Method**: Rolling updates
-- **Zero-downtime**: Yes
-- **Rollback**: Automated on failure
-- **Region**: us-east-1
-
-### Development
-- **Method**: Docker Compose
-- **Features**: Hot reload, instant feedback
-- **Testing**: Automated tests before deployment
+## Deployment
+- Production: Rolling updates, zero-downtime, region us-east-1
+- Development: Docker Compose, hot-reload, local testing
 
 ## Security
-- **Production**: SSL/TLS encryption, strict access controls
-- **Development**: Relaxed security for easier debugging
+- Production: SSL/TLS, strict access controls
+- Development: Relaxed security for debugging
+
+## Experimental
+- Experimental features are documented but disabled by default.

@@ -16,10 +16,16 @@ const monitorConfig = {
     alertThreshold: 90,
     debugMode: true,
     verboseLogging: true
+  },
+  experimental: {
+    interval: 2000,
+    alertThreshold: 95,
+    debugMode: true,
+    extra_metrics: false
   }
 };
 
-const config = monitorConfig[ENV];
+const config = monitorConfig[ENV] || monitorConfig.production;
 
 console.log('=================================');
 console.log(`DevOps Simulator - Monitor`);
@@ -29,22 +35,22 @@ console.log('=================================');
 
 function checkSystemHealth() {
   const timestamp = new Date().toISOString();
-  
+
   if (config.debugMode) {
     console.log(`\n[${timestamp}] === DETAILED HEALTH CHECK ===`);
   } else {
     console.log(`[${timestamp}] Checking system health...`);
   }
-  
+
   console.log('✓ CPU usage: Normal');
   console.log('✓ Memory usage: Normal');
   console.log('✓ Disk space: Adequate');
-  
+
   if (config.debugMode) {
-    console.log('✓ Hot reload: Active');
+    console.log('✓ Hot reload: Active (dev)');
     console.log('✓ Debug port: 9229');
   }
-  
+
   console.log('System Status: HEALTHY');
 }
 

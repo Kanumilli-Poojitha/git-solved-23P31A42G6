@@ -29,5 +29,11 @@
       "seed_data": true,
       "debug_queries": true
     }
+  },
+  "experimental": {
+    "analytics_db": {
+      "host": "analytics.local",
+      "enabled": false
+    }
   }
 }
