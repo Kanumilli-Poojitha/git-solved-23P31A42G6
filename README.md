@@ -18,4 +18,4 @@ Development:
   npm install
   npm run dev
 
-Experimental features are disabled by default.
+Experimental features are disabled by default.## FAQ
